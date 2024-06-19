@@ -1,1 +1,11 @@
-console.log("welcome to e-lib API ");
+import app from "./src/app";
+
+const startServer = () => {
+  const port = process.env.PORT || 8000;
+
+  app.listen(port, () => {
+    console.log(`Listening on port:${port}`);
+  });
+};
+
+startServer();
