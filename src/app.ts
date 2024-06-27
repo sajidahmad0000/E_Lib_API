@@ -1,6 +1,7 @@
 import express from "express";
 
 import globalErrorHandler from "./middlewares/globalErrorHandler";
+import userRouter from "./user/userRouter";
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.get("/", (req, res, next) => {
   res.json({ message: "Welcom to E_LIB_API" });
 });
 
+app.use("/api/users", userRouter);
 // global error handlers should be after all routes you define
 app.use(globalErrorHandler); // express will call this we dont have to
 
