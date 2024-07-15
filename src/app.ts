@@ -2,14 +2,15 @@ import express from "express";
 
 import globalErrorHandler from "./middlewares/globalErrorHandler";
 import userRouter from "./user/userRouter";
+// import createHttpError from "http-errors";
 
 const app = express();
 
 // Routes
 // http methods :  get ,post put, patch, delete
 app.get("/", (req, res, next) => {
-  //   const error = createHttpError(400, "something went WRong");
-  //   throw error;
+  // const error = createHttpError(400, "something went WRong"); // this for testing if the global error handler is working or not
+  // throw error;
   res.json({ message: "Welcom to E_LIB_API" });
 });
 
