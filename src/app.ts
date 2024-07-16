@@ -5,6 +5,7 @@ import userRouter from "./user/userRouter";
 // import createHttpError from "http-errors";
 
 const app = express();
+app.use(express.json()); // for json parsing
 
 // Routes
 // http methods :  get ,post put, patch, delete
